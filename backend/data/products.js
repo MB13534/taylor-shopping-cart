@@ -119,3 +119,5 @@ const products = [
     // imageUrl8: '',
   },
 ];
+
+module.exports = products;
