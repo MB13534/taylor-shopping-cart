@@ -1,7 +1,17 @@
 .navbar {
   width: 100%;
-  height: 110px;
-  background-color: var(--background-main);
+  display: flex;
+  background-color: var(--background-dark1);
+  justify-content: center;
+  /* needs to be raised for the backdrop and the sidebar */
+  z-index: 50;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.navbar__container {
+  width: 1390px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,9 +21,19 @@
 }
 
 .navbar__logo h2 {
-  color: var(--font-main);
+  display: flex;
+  align-items: center;
+  color: var(--font-white-primary);
+  font-size: 1.6rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.navbar__logo h2 span {
+  color: var(--font-pink-primary);
   font-size: 1.4rem;
   cursor: pointer;
+  font-weight: 400;
 }
 
 .navbar__links {
@@ -28,10 +48,26 @@
 
 .navbar__links > li > a {
   text-decoration: none;
-  color: var(--font-main);
+  color: var(--font-white-primary);
   font-size: 1.2rem;
   display: flex;
   align-items: center;
+  height: 50px;
+  padding: 10px;
+}
+
+.navbar__link {
+  width: 70px;
+}
+
+.navbar__link:hover {
+  font-weight: 400;
+  background-color: var(--button-background1);
+  border-radius: 8px;
+}
+
+.navbar__link:active {
+  transform: scale(0.98);
 }
 
 .navbar__links > li > a > span {
@@ -41,23 +77,28 @@
 }
 
 .cart__link {
-  background-color: var(--button-background);
+  background-color: var(--button-background1);
   padding: 10px;
   border-radius: 8px;
 }
 
 .cart__link:hover {
-  background-color: var(--button-background-hover);
-  color: var(--font-main);
+  background-color: var(--font-pink-primary);
+  color: var(--font-white-primary);
+  font-weight: 400;
+}
+
+.cart__link:active {
+  transform: scale(0.98);
 }
 
 .cartlogo__badge {
   width: 30px;
   height: 30px;
-  background-color: var(--font-main);
+  background-color: var(--font-white-primary);
   border-radius: 50%;
   margin-left: 8px;
-  color: var(--background-main);
+  color: var(--background-dark1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,11 +120,11 @@
 .hamburger__menu > div {
   width: 100%;
   height: 3px;
-  background-color: var(--font-main);
+  background-color: var(--font-white-primary);
 }
 
 .hamburger__menu:hover > div {
-  background-color: var(--button-background-hover);
+  background-color: var(--font-pink-primary);
 }
 
 @media (max-width: 960px) {

@@ -1,0 +1,87 @@
+.productscreen {
+  max-width: 1300px;
+  margin: 1rem auto;
+  display: flex;
+}
+
+.productscreen__left {
+  display: flex;
+  flex: 0.8;
+}
+
+.left__image {
+  margin: 1rem;
+  flex: 0.6;
+}
+
+.left__info {
+  margin: 1rem;
+  flex: 0.4;
+  background-color: white;
+  height: fit-content;
+  font-size: 0.9rem;
+}
+
+.left__name {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.left__info > p,
+.right__info > p {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.left__info > p:last-child,
+.right__info > p:last-child {
+  border: none;
+}
+
+.productscreen__right {
+  flex: 0.2;
+}
+
+.right__info {
+  width: 250px;
+  margin: 1rem;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.right__info p {
+  padding: 1rem;
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.right__info p > button {
+  grid-column: 1 / -1;
+  color: var(--font-white-primary);
+  background-color: var(--font-pink-primary);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.right__info p > button:hover {
+  opacity: 0.9;
+}
+
+.right__info p > button:active {
+  transform: scale(0.98);
+  box-shadow: none;
+}
+
+.right__info p > button:focus {
+  outline: none;
+}
+
+.right__info select {
+  padding: 10px 16px;
+}

@@ -37,13 +37,14 @@
   flex: 1;
   padding: 1rem;
   text-decoration: none;
-  color: var(--background-main);
+  color: var(--background-dark1);
   font-size: 1.6rem;
 }
 
 .sidedrawer__links > li > a:hover {
-  background-color: var(--background-main);
-  color: var(--font-main);
+  background-color: var(--font-pink-primary);
+  color: var(--font-white-primary);
+  /* transition: all 0.2s; */
 }
 
 .sidedrawer__links > li > a > span {
@@ -60,15 +61,16 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: var(--background-main);
-  color: var(--font-main);
+  background-color: var(--background-dark1);
+  color: var(--font-white-primary);
   font-size: 1rem;
   margin-left: 8px;
 }
 
 .sidedrawer__links > li > a:hover .sidedrawer__cartbadge {
-  background-color: var(--font-main);
-  color: var(--background-main);
+  background-color: var(--font-white-primary);
+  color: var(--background-dark1);
+  /* transition: all 0.2s; */
 }
 
 @media (min-width: 960px) {
