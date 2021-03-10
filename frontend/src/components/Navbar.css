@@ -62,7 +62,7 @@
 
 .navbar__link:hover {
   font-weight: 400;
-  background-color: var(--button-background1);
+  background-color: var(--button-background-dark1);
   border-radius: 8px;
 }
 
@@ -77,7 +77,7 @@
 }
 
 .cart__link {
-  background-color: var(--button-background1);
+  background-color: var(--button-background-dark1);
   padding: 10px;
   border-radius: 8px;
 }

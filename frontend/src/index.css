@@ -1,7 +1,8 @@
 :root {
   --font-white-primary: #f4f4f4;
   --font-pink-primary: #ff4faa;
-  --button-background1: #333;
+  --button-background-dark1: #333;
+  --button-background-light1: rgb(99, 99, 99);
   --background-dark1: #171717;
 }
 

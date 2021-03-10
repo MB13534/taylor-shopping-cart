@@ -12,8 +12,18 @@ const ProductScreen = () => {
         </div>
 
         <div className="left__info">
-          <p className="left__name">Product 1</p>
-          <p className="left__price">$420.19</p>
+          <p className="left__name">
+            Hermès Paris Printed sweater dress grey size 36
+          </p>
+          <p className="left__brand">
+            Hermès<span>NWT</span>
+          </p>
+          <p className="left__price-container">
+            <p className="left__price">$385</p>
+            <p className="left__size">
+              Size<span>4</span>
+            </p>
+          </p>
           <p className="left__description">
             Hermès Paris Printed sweater dress grey size 36. Gorgeous grey
             cardigan sweater overlaps a stunning printed button front cotton
@@ -29,6 +39,16 @@ const ProductScreen = () => {
             <br />
             <br />
             Open to offers!
+          </p>
+          <p className="left__sex-container">
+            <p className="left__sex">Women</p>
+            <p className="left__category">Dresses</p>
+            <p className="left__subCategory">SubCategory</p>
+          </p>
+
+          <p className="left__color-container">
+            <p className="left__color">Gray</p>
+            <p className="left__subColor">Blue</p>
           </p>
         </div>
       </div>

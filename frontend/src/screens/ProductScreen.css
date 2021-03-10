@@ -23,8 +23,82 @@
 }
 
 .left__name {
-  font-weight: 700;
   font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.left__brand {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.left__brand > span {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  color: var(--font-white-primary);
+  background-color: var(--button-background-light1);
+  border-radius: 50px;
+}
+
+.left__price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left__price {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.left__size {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.left__size span {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid var(--font-pink-primary);
+}
+
+.left__sex,
+.left__category,
+.left__subCategory,
+.left__color,
+.left__subColor {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 10px 15px;
+  margin-right: 5px;
+  color: var(--font-white-primary);
+  background-color: var(--button-background-light1);
+  border-radius: 50px;
+}
+
+.left__sex-container {
+  display: flex;
+  align-items: center;
+}
+
+.left__color-container {
+  display: flex;
+  align-items: center;
 }
 
 .left__info > p,
