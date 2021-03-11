@@ -19,7 +19,6 @@ const ProductScreen = ({ match, history }) => {
       dispatch(getProductDetails(match.params.id));
     }
   }, [dispatch, product, match]);
-
   return (
     <div className="productscreen">
       {loading ? (
