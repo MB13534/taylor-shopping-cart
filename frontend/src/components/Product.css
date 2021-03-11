@@ -59,7 +59,13 @@ a {
   padding-left: 8px;
 }
 
-.bottom-container {
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -72,7 +78,7 @@ a {
   overflow: hidden;
 }
 
-.info__brand > span {
+.info__nwt {
   display: flex;
   align-items: center;
   font-size: 0.7rem;

@@ -2,25 +2,35 @@ import { Link } from "react-router-dom";
 
 import "./Product.css";
 
-const Product = () => {
+const Product = ({
+  brand,
+  nwt,
+  name,
+  price,
+  size,
+  imageUrl,
+  productId,
+  subCategory,
+}) => {
   return (
-    <Link to={`/product/${1234}`}>
+    <Link to={`/product/${productId}`}>
       <div className="product">
-        <img
-          src="https://di2ponv0v5otw.cloudfront.net/posts/2021/01/16/6003b6a01801365fdb342deb/m_6003b6d8275e555fdcc445bb.jpg"
-          alt="Product Name"
-        />
+        <img src={imageUrl} alt={name} />
         <div className="product__info">
-          <p className="info__brand">
-            Hermès<span>NWT</span>
-          </p>
+          <div className="brand-container">
+            <p className="info__brand">{brand}</p>
+            {/* if nwt is true */}
+            {nwt && <p className="info__nwt">NWT</p>}
+          </div>
+
           <p className="info__name">
-            Hermès Paris Printed sweater dress grey size 36
+            {name}
+            {/* {name.substring(0, 100)}... */}
           </p>
-          <div className="bottom-container">
-            <p className="info__price">$385</p>
+          <div className="price-container">
+            <p className="info__price">${price}</p>
             <p className="info__size">
-              Size<span>4</span>
+              Size<span>{size}</span>
             </p>
           </div>
 

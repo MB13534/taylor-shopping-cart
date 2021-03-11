@@ -20,22 +20,26 @@ const HomeScreen = () => {
     <div className="homescreen">
       <h2 className="homescreen__title">Latest Products</h2>
       <div className="homescreen__products">
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+        {/* check to make sure the async action to load all the items is complete */}
+        {loading ? (
+          <h2>Loading...</h2>
+        ) : error ? (
+          <h2>{error}</h2>
+        ) : (
+          products.map((product) => (
+            <Product
+              key={product._id}
+              brand={product.brand}
+              nwt={product.nwt}
+              name={product.name}
+              price={product.price}
+              size={product.size}
+              imageUrl={product.images[0]}
+              productId={product._id}
+              subCategory={product.subCategory}
+            />
+          ))
+        )}
       </div>
     </div>
   );
