@@ -1,0 +1,22 @@
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: var(--font-pink-primary);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  width: 49.5%;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:focus {
+  outline: none;
+}

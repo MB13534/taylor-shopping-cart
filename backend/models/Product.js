@@ -43,30 +43,9 @@ const productSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  imageUrl1: {
-    type: String,
+  images: {
+    type: Array,
     required: true,
-  },
-  imageUrl2: {
-    type: String,
-  },
-  imageUrl3: {
-    type: String,
-  },
-  imageUrl4: {
-    type: String,
-  },
-  imageUrl5: {
-    type: String,
-  },
-  imageUrl6: {
-    type: String,
-  },
-  imageUrl7: {
-    type: String,
-  },
-  imageUrl8: {
-    type: String,
   },
 });
 

@@ -20,7 +20,7 @@ const Product = () => {
           <div className="bottom-container">
             <p className="info__price">$385</p>
             <p className="info__size">
-              Size -<span>4</span>
+              Size<span>4</span>
             </p>
           </div>
 

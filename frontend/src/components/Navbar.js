@@ -9,9 +9,11 @@ const Navbar = ({ click }) => {
       <div className="navbar__container">
         {/* logo */}
         <div className="navbar__logo">
-          <h2>
-            <span>Tailored by Tay</span>Shopping
-          </h2>
+          <Link to="/" className="navbar__link">
+            <h2>
+              <span>Tailored by Tay</span>Shopping
+            </h2>
+          </Link>
         </div>
 
         {/* links */}
