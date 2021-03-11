@@ -7,7 +7,7 @@ import { getProductDetails } from "../redux/actions/productActions";
 import { addToCart } from "../redux/actions/cartActions";
 
 const ProductScreen = ({ match, history }) => {
-  const [qty, setQty] = useState(1);
+  const [qty] = useState(1);
   const dispatch = useDispatch();
 
   const productDetails = useSelector((state) => state.getProductDetails);
@@ -19,6 +19,11 @@ const ProductScreen = ({ match, history }) => {
       dispatch(getProductDetails(match.params.id));
     }
   }, [dispatch, product, match]);
+
+  const addToCartHandler = () => {
+    dispatch(addToCart(product._id, qty));
+    history.push("/cart");
+  };
   return (
     <div className="productscreen">
       {loading ? (
@@ -66,14 +71,19 @@ const ProductScreen = ({ match, history }) => {
           <div className="productscreen__right">
             <div className="right__info">
               <p>
-                Price: <span>$420.19</span>
+                Price: <span>${product.price}</span>
               </p>
               <p>
-                Status: <span>In Stock</span>
+                Status:{" "}
+                <span>
+                  {product.countInStock > 0 ? "In Stock" : "Out of Stock"}
+                </span>
               </p>
 
               <p>
-                <button type="button">Add to Cart</button>
+                <button type="button" onClick={addToCartHandler}>
+                  Add to Cart
+                </button>
               </p>
             </div>
           </div>
