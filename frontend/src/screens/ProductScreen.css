@@ -36,7 +36,7 @@
   letter-spacing: 1px;
 }
 
-.left__brand > span {
+left__nwt {
   display: flex;
   align-items: center;
   font-size: 0.7rem;
@@ -44,6 +44,12 @@
   color: var(--font-white-primary);
   background-color: var(--button-background-light1);
   border-radius: 50px;
+}
+
+.left__brand-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .left__price-container {

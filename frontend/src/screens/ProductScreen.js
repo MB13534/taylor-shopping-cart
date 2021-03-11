@@ -33,43 +33,33 @@ const ProductScreen = ({ match, history }) => {
             </div>
 
             <div className="left__info">
-              <p className="left__name">
-                Hermès Paris Printed sweater dress grey size 36
-              </p>
-              <p className="left__brand">
-                Hermès<span>NWT</span>
-              </p>
+              <p className="left__name">{product.name}</p>
+
+              <div className="left__brand-container">
+                <p className="left__brand">{product.brand}</p>
+                {product.nwt && <p className="info__nwt">NWT</p>}
+              </div>
+
               <div className="left__price-container">
-                <p className="left__price">$385</p>
+                <p className="left__price">${product.price}</p>
                 <p className="left__size">
-                  Size<span>4</span>
+                  Size<span>{product.size}</span>
                 </p>
               </div>
-              <p className="left__description">
-                Hermès Paris Printed sweater dress grey size 36. Gorgeous grey
-                cardigan sweater overlaps a stunning printed button front cotton
-                dress in this gorgeous Hermès dress. Whimsical blue green and
-                yellow pattern on both panels in front. Back of both pieces of
-                this dress are sweater material.
-                <br />
-                <br />
-                Sweater 100% virgin wool
-                <br />
-                <br />
-                Underneath printed section 100% cotton
-                <br />
-                <br />
-                Open to offers!
-              </p>
+              <p className="left__description">{product.description}</p>
               <div className="left__sex-container">
-                <p className="left__sex">Women</p>
-                <p className="left__category">Dresses</p>
-                <p className="left__subCategory">SubCategory</p>
+                <p className="left__sex">{product.sex}</p>
+                <p className="left__category">{product.category}</p>
+                {product.subCategory && (
+                  <p className="left__subCategory">{product.subCategory}</p>
+                )}
               </div>
 
               <div className="left__color-container">
-                <p className="left__color">Gray</p>
-                <p className="left__subColor">Blue</p>
+                <p className="left__color">{product.color}</p>
+                {product.subColor && (
+                  <p className="left__subCategory">{product.subColor}</p>
+                )}
               </div>
             </div>
           </div>
