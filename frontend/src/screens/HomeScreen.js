@@ -3,12 +3,19 @@ import { useSelector, useDispatch } from "react-redux";
 
 import "./HomeScreen.css";
 import Product from "../components/Product";
-import { getProducts as listProducts } from "../redux/actions/productActions";
+import SearchBox from "../components/SearchBox";
+import {
+  getProducts as listProducts,
+  setSearchField,
+} from "../redux/actions/productActions";
 
 const HomeScreen = () => {
   const dispatch = useDispatch();
 
   const getProducts = useSelector((state) => state.getProducts);
+  const searchValue = useSelector((state) => state.setSearchField);
+  console.log(searchValue);
+
   const { products, loading, error } = getProducts;
 
   useEffect(() => {
@@ -19,6 +26,9 @@ const HomeScreen = () => {
   return (
     <div className="homescreen">
       <h2 className="homescreen__title">Latest Products</h2>
+      <SearchBox
+        onSearchChange={(e) => dispatch(setSearchField(e.target.value))}
+      />
       <div className="homescreen__products">
         {/* check to make sure the async action to load all the items is complete */}
         {loading ? (

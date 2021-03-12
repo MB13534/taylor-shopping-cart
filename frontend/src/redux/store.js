@@ -7,12 +7,14 @@ import { cartReducer } from "./reducers/cartReducers";
 import {
   getProductDetailsReducer,
   getProductsReducer,
+  setSearchFieldReducer,
 } from "./reducers/productReducers";
 
 const reducer = combineReducers({
   cart: cartReducer,
   getProducts: getProductsReducer,
   getProductDetails: getProductDetailsReducer,
+  setSearchField: setSearchFieldReducer,
 });
 
 const middleware = [thunk];

@@ -48,3 +48,9 @@ export const removeProductDetails = () => (dispatch) => {
     type: actionTypes.GET_PRODUCT_DETAILS_RESET,
   });
 };
+
+//ACTION CREATOR TO UPDATE THE CURRENT STATE OF THE SEARCH FIELD
+export const setSearchField = (text) => ({
+  type: actionTypes.CHANGE_SEARCHFIELD,
+  payload: text,
+});

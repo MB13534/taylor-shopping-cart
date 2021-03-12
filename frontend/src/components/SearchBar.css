@@ -1,0 +1,15 @@
+.search {
+  height: 30px;
+  width: 250px;
+  border-radius: 15px;
+  padding-left: 15px;
+  transition: all 0.5s;
+  border: none;
+}
+
+.search:focus {
+  outline: none;
+  transform: scale(1.2);
+  border: solid #05036d 1px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}

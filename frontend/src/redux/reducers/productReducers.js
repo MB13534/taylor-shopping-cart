@@ -46,3 +46,15 @@ export const getProductDetailsReducer = (state = { product: {} }, action) => {
       return state;
   }
 };
+
+export const setSearchFieldReducer = (
+  state = { searchField: "" },
+  action = {}
+) => {
+  switch (action.type) {
+    case actionTypes.CHANGE_SEARCHFIELD:
+      return { ...state, searchField: action.payload };
+    default:
+      return state;
+  }
+};
