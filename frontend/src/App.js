@@ -23,9 +23,17 @@ function App() {
       <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
       <main>
         <Switch>
-          <Route exact path="/" component={HomeScreen} />
-          <Route exact path="/product/:id" component={ProductScreen} />
-          <Route exact path="/cart" component={CartScreen} />
+          <Route exact path="/taylor-shopping-cart/" component={HomeScreen} />
+          <Route
+            exact
+            path="/taylor-shopping-cart/product/:id"
+            component={ProductScreen}
+          />
+          <Route
+            exact
+            path="/taylor-shopping-cart/cart"
+            component={CartScreen}
+          />
         </Switch>
       </main>
     </Router>
