@@ -5,6 +5,11 @@ import "./ImageCarousel.css";
 const ImageCarousel = ({ images }) => {
   const [imageIndex, setImageIndex] = useState(0);
 
+  //removes any image with '' as field
+  if (images) {
+    images = images.filter((image) => image !== "");
+  }
+
   const changeImageLeft = () => {
     if (imageIndex === 0) {
       setImageIndex(images.length - 1);
