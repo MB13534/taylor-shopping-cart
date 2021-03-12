@@ -1,6 +1,9 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 
+//this is for heroku only
+const MONGO_URI = process.env.MONGODB_URI;
+
 //create setup and get mongoose to connect to DB
 
 //async because we are connecting to our DB
