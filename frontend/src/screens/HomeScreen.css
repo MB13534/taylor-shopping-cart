@@ -3,10 +3,16 @@
   margin: 1rem auto;
 }
 
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
 .homescreen__title {
   font-size: 1.5rem;
   color: var(--barkground-dark1);
-  margin-bottom: 1rem;
 }
 
 .homescreen__products {

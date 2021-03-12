@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import "./HomeScreen.css";
 import Product from "../components/Product";
-import SearchBox from "../components/SearchBox";
+import SearchBar from "../components/SearchBar";
 import {
   getProducts as listProducts,
   setSearchField,
@@ -14,21 +14,35 @@ const HomeScreen = () => {
 
   const getProducts = useSelector((state) => state.getProducts);
   const searchValue = useSelector((state) => state.setSearchField);
-  console.log(searchValue);
 
   const { products, loading, error } = getProducts;
+  const { searchField } = searchValue;
+
+  console.log(typeof searchField);
 
   useEffect(() => {
     dispatch(listProducts());
   }, [dispatch]);
 
+  //narrows down users search by brand
+  const filterSearch = () => {
+    return products.filter((product) => {
+      return product.brand.toLowerCase().includes(searchField.toLowerCase());
+    });
+  };
+
+  const filteredSearch = filterSearch();
+
   //need to add proxy to package.json "proxy": "http://127.0.0.1:3001",
   return (
     <div className="homescreen">
-      <h2 className="homescreen__title">Latest Products</h2>
-      <SearchBox
-        onSearchChange={(e) => dispatch(setSearchField(e.target.value))}
-      />
+      <div className="title-container">
+        <h2 className="homescreen__title">Latest Products</h2>
+        <SearchBar
+          onSearchChange={(e) => dispatch(setSearchField(e.target.value))}
+          placeholder="Search my Listings"
+        />
+      </div>
       <div className="homescreen__products">
         {/* check to make sure the async action to load all the items is complete */}
         {loading ? (
@@ -36,7 +50,7 @@ const HomeScreen = () => {
         ) : error ? (
           <h2>{error}</h2>
         ) : (
-          products.map((product) => (
+          filteredSearch.map((product) => (
             <Product
               key={product._id}
               brand={product.brand}
