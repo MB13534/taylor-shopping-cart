@@ -11,11 +11,11 @@ const {
 //GET all of our products from DB
 //@route GET /api/products
 //@access public
-router.get("/", getAllProducts);
+router.get("/taylor-shopping-cart/", getAllProducts);
 
 //GET a product from DB
 //@route GET /api/products/:id
 //@access public
-router.get("/:id", getProductById);
+router.get("/taylor-shopping-cart/:id", getProductById);
 
 module.exports = router;
