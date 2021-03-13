@@ -1,3 +1,12 @@
+.fixed-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  z-index: 100;
+}
+
 .navbar {
   width: 100%;
   display: flex;
@@ -7,6 +16,7 @@
   z-index: 50;
   font-weight: 100;
   text-transform: uppercase;
+  opacity: 0.97;
 }
 
 .navbar__container {
@@ -127,7 +137,7 @@
   background-color: var(--font-pink-primary);
 }
 
-@media (max-width: 960px) {
+@media (max-width: 950px) {
   .navbar__links {
     display: none;
   }

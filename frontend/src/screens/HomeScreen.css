@@ -5,6 +5,7 @@
 
 .title-container {
   display: flex;
+  margin: 0 1rem;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
@@ -26,13 +27,13 @@
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 800px) {
   .homescreen__products {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 630px) {
+@media (max-width: 460px) {
   .homescreen__products {
     grid-template-columns: repeat(1, 1fr);
   }

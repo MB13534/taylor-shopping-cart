@@ -11,6 +11,9 @@ const SearchBar = ({ onSearchChange, placeholder }) => {
         placeholder={placeholder}
         onChange={onSearchChange}
       />
+      <button className="search__button">
+        <i className="fas fa-search"></i>
+      </button>
     </div>
   );
 };

@@ -14,3 +14,41 @@
   border: solid var(--font-pink-primary) 3px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.search__button {
+  display: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  color: var(--font-white-primary);
+  background-color: var(--font-pink-primary);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.search__button:hover {
+  opacity: 0.9;
+  font-weight: 700;
+}
+
+.search__button:focus {
+  outline: none;
+}
+
+.search__button:active {
+  transform: scale(0.98);
+  box-shadow: none;
+}
+
+@media (max-width: 950px) {
+  .search {
+    display: none;
+  }
+  .search__button {
+    display: flex;
+  }
+}
