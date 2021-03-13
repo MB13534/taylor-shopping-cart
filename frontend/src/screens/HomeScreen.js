@@ -18,8 +18,6 @@ const HomeScreen = () => {
   const { products, loading, error } = getProducts;
   const { searchField } = searchValue;
 
-  console.log(typeof searchField);
-
   useEffect(() => {
     dispatch(listProducts());
   }, [dispatch]);
